@@ -15,30 +15,24 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+        bindings = <
 
-            bindings = <
-        &kp ESC  &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                          &kp N6         &kp N7     &kp N8   &kp N9    &kp N0  &kp BACKSPACE
-        &kp TAB   &kp Q   &kp W      &kp E     &kp R     &kp T                           &kp Z          &kp U      &kp I    &kp O     &kp P      &de ue
- &kp LEFT_SHIFT   &kp A   &kp S      &kp D     &kp F     &kp G                           &kp H          &kp J      &kp K    &kp L  &de oe        &de ae
-          &mo 1   &kp Y   &kp X      &kp C     &kp V     &kp B  &kp ENTER  &kp ENTER     &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH          &mo 2
-                                 &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE  &kp SPACE  &kp RCMD  &kp SEPARATOR   &kp RGUI
+     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+            &kp ESC       &kp N1        &kp N2         &kp N3       &kp N4        &kp N5                                         &kp N6        &kp N7        &kp N8        &kp N9         &kp N0    &kp BACKSPACE
+     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+            &kp TAB       &kp Q         &kp W          &kp E        &kp R         &kp T                                          &kp Z         &kp U         &kp I         &kp O          &kp P         &kp X
+     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+         &kp LEFT_SHIFT   &kp A         &kp S          &kp D        &kp F         &kp G                                          &kp H         &kp J         &kp K         &kp L          &kp X         &kp X
+     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+            &mo 1         &kp Y          &kp X         &kp C          &kp V        &kp B                                         &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH       &mo 2
+     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                       &kp LCTRL     &kp LALT      &kp LGUI      &kp SPACE     &kp ENTER         &kp ENTER      &kp SPACE     &kp RCMD    &kp SEPARATOR   &kp RGUI
+    //                              ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
 
         lower_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
-
+        
             bindings = <
  &bt BT_CLR      &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &trans     &trans           &trans    &trans    &trans     &trans
      &kp F1            &kp F2             &kp F3             &kp F4        &kp F5        &kp F6                     &kp F7     &kp F8           &kp F9   &kp F10   &kp F11    &kp F12
