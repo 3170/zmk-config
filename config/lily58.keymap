@@ -22,7 +22,7 @@
                                  &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &kp SPACE  &kp SPACE  &kp RCMD  &kp RIGHT_ALT  &kp RCTRL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
         };
 
         lower_layer {
@@ -34,7 +34,7 @@
                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
         };
 
         raise_layer {
@@ -46,7 +46,7 @@
                          &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
         };
     };
 };
