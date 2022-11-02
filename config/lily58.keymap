@@ -29,20 +29,22 @@
         lower_layer {
             bindings = <
         &kp ESC  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC    &kp F3    &kp F4     &kp F5                        &kp K_PREVIOUS  &kp K_PLAY_PAUSE     &kp K_NEXT  &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_DOWN
-        &kp TAB                 &kp Q                 &kp W     &kp E     &kp R      &kp T                                 &kp Z             &kp U          &kp I       &kp O              &kp P              &kp X
- &kp LEFT_SHIFT                 &kp A                 &kp S     &kp D     &kp F      &kp G                                 &kp H             &kp J          &kp K       &kp L              &kp X              &kp X
-          &mo 1                 &kp Y                 &kp X     &kp C     &kp V      &kp B                                 &kp N             &kp M      &kp COMMA     &kp DOT          &kp MINUS              &mo 2
-                                                  &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE  &kp ENTER  &kp ENTER       &kp SPACE          &kp RCMD  &kp SEPARATOR    &kp RGUI
+ &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+
             >;
         };
 
         raise_layer {
             bindings = <
-        &kp ESC  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5                           &kp N6    &kp N7         &kp N8    &kp N9    &kp N0  &kp BACKSPACE
-        &kp TAB   &kp Q      &kp W     &kp E     &kp R      &kp T                            &kp Z     &kp U          &kp I     &kp O     &kp P          &kp X
- &kp LEFT_SHIFT   &kp A      &kp S     &kp D     &kp F      &kp G                            &kp H     &kp J          &kp K     &kp L     &kp X          &kp X
-          &mo 1   &kp Y      &kp X     &kp C     &kp V      &kp B                            &kp N     &kp M      &kp COMMA   &kp DOT  &kp FSLH          &mo 2
-                         &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE  &kp ENTER  &kp ENTER  &kp SPACE  &kp RCMD  &kp SEPARATOR  &kp RGUI
+ &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+
             >;
         };
     };
