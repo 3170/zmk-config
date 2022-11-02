@@ -5,12 +5,32 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 
 #include "../zmk-nodefree-config/helper.h">"
-
 #include "../zmk-nodefree-config/keypos_def/keypos_58keys.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
-#include <dt-bindings/zmk/keys.h>
+
+// homerow mods
+ZMK_BEHAVIOR(hrm, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+)
+
+// tap: sticky shift | double tap: capsword
+ZMK_BEHAVIOR(ss_cw, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&sk LSHFT>, <&caps_word>;
+)
+
+// tap: backspace | shift + tap: delete | hold: num layer
+ZMK_BEHAVIOR(bs_del_num, mod_morph,
+    bindings = <&lt NUM BSPC>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
 
 / {
     keymap {
