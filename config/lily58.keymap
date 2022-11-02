@@ -11,7 +11,7 @@
 
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_58keys.h"
-#include "../zmk-nodefree-config/international_chars/german.dtsi"
+
 
 / {
     keymap {
