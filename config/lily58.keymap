@@ -13,7 +13,7 @@
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 #include "../zmk-nodefree-config/helper.h"
 
-/ {
+ {
     keymap {
         compatible = "zmk,keymap";
 
