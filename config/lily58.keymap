@@ -23,7 +23,7 @@
         &kp ESC        &kp C_PP  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP   &kp BACKSPACE                          &trans        &trans    &trans    &trans   &trans       &kp MINUS
         &tog 1         &kp Q     &kp W       &kp E         &kp R          &kp T                                  &kp Y         &kp U     &kp I     &kp O    &kp P        &kp BACKSPACE
         &kp TAB        &kp A     &kp S       &kp D         &kp F          &kp G                                  &kp H         &kp J     &kp K     &kp L    &trans       &kp RIGHT_SHIFT
-        &kp LEFT_SHIFT &kp Z     &kp X       &kp C         &kp V          &kp B          &kp SPACE    &kp SPACE  &kp N         &kp M     &kp COMMA &kp DOT  &out OUT_TOG &mo 2
+        &kp LEFT_SHIFT &kp Z     &kp X       &kp C         &kp V          &kp B          &kp SPACE    &kp SPACE  &kp N         &kp M     &kp COMMA &kp DOT  &bt BT_NXT   &mo 2
                                  &kp LCTRL   &kp LEFT_ALT  &kp ENTER      &kp LCMD       &kp RCMD     &kp ENTER  &kp RIGHT_ALT &kp RCTRL
             >;
         };
