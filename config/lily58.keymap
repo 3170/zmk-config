@@ -10,8 +10,9 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define HOST_OS 2
-#include "../zmk-nodefree-config/international_chars/german.dtsi"
 #include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/international_chars/german.dtsi"
+
 
  / {
     keymap {
