@@ -37,7 +37,7 @@
         &kp BACKSPACE   AS(Q)     AS(W)       AS(E)         AS(R)          AS(T)                                  AS(Z)         AS(U)           AS(I)     AS(O)    AS(P)           &kp BACKSPACE
         &kp LEFT_SHIFT  AS(A)     AS(S)       AS(D)         AS(F)          AS(G)                                  AS(H)         AS(J)           AS(K)     AS(L)    &kp UP_ARROW    &kp RIGHT_SHIFT
         &kp ESC         AS(Y)     AS(X)       AS(C)         AS(V)          AS(B)    &kp ENTER          &kp ENTER  AS(N)         AS(M)           AS(COMMA) AS(DOT)  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                                              &kp LCTRL   &kp LEFT_ALT  &kp LCMD    &kp SPACE          &kp SPACE  &kp RCMD      &trans          &trans
+                                              &kp LCTRL   &kp LEFT_ALT  &kp LCMD    &kp SPACE          &kp SPACE  &kp RCMD      &trans          &kp LEFT_ARROW
             >;
         };
 
