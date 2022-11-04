@@ -20,30 +20,30 @@
 
         default_layer {
             bindings = <
-        &kp ESC        &kp C_PP  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP   &kp BACKSPACE                          &trans        &trans    &trans    &trans   &trans       &kp MINUS
-        &tog 1         &kp Q     &kp W       &kp E         &kp R          &kp T                                  &kp Y         &kp U     &kp I     &kp O    &kp P        &kp BACKSPACE
-        &kp TAB        &kp A     &kp S       &kp D         &kp F          &kp G                                  &kp H         &kp J     &kp K     &kp L    &trans       &kp RIGHT_SHIFT
-        &kp LEFT_SHIFT &kp Z     &kp X       &kp C         &kp V          &kp B          &kp SPACE    &kp SPACE  &kp N         &kp M     &kp COMMA &kp DOT  &trans     &mo 2
-                                 &kp LCTRL   &kp LEFT_ALT  &kp ENTER      &kp LCMD       &kp RCMD     &kp ENTER  &kp RIGHT_ALT &kp RCTRL
+        &kp ESC        &kp C_PP  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP   &mo 1                             &trans        &trans    &trans    &trans   &trans   &kp MINUS
+        &kp BACKSPACE  &kp Q     &kp W       &kp E         &kp R          &kp T                             &kp Y         &kp U     &kp I     &kp O    &kp P    &kp BACKSPACE
+        &kp TAB        &kp A     &kp S       &kp D         &kp F          &kp G                             &kp H         &kp J     &kp K     &kp L    &trans   &kp RIGHT_SHIFT
+        &kp LEFT_SHIFT &kp Z     &kp X       &kp C         &kp V          &kp B     &kp SPACE    &kp SPACE  &kp N         &kp M     &kp COMMA &kp DOT  &trans   &mo 2
+                                 &kp LCTRL   &kp LEFT_ALT  &kp ENTER      &kp LCMD  &kp RCMD     &kp ENTER  &kp RIGHT_ALT &kp RCTRL
             >;
         };
 
         lower_layer {
             bindings = <
- &trans      &trans          &trans          &trans           &trans           &trans                  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans
- &trans      &trans          &trans          &kp UP_ARROW     &trans           &trans                  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans  &trans
- &bt BT_CLR  &bt BT_SEL 1    &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &trans                  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &trans
- &bt BT_PRV  &bt BT_NXT      &trans          &trans           &trans           &trans  &trans  &trans        &trans  &kp NUMBER_0        &trans  &trans  &trans  &trans
-                                             &trans           &trans           &trans  &trans  &trans        &trans        &trans        &trans
+ &trans         &trans   &trans          &trans           &trans           &trans                   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans
+ &out OUT_TOG   &trans   &trans          &kp UP_ARROW     &trans           &trans                   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans  &trans
+ &bt BT_CLR     &trans   &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &trans                   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &trans
+ &bt BT_NXT     &trans   &trans          &trans           &trans           &trans  &trans  &trans   &trans        &kp NUMBER_0  &trans        &trans  &trans  &trans
+                                             &trans           &trans           &trans  &trans  &trans   &trans        &trans        &trans
             >;
         };
 
         raise_layer {
             bindings = <
- &trans    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
- &trans          &trans        &trans        &trans        &trans        &trans                        &trans            &de_ue        &trans        &de_oe        &trans  &trans
- &trans          &de_ae        &trans        &trans        &trans        &trans                        &trans            &trans        &trans        &trans        &trans  &trans
- &trans          &trans        &trans        &trans        &trans        &trans  &trans  &trans        &trans            &trans        &trans        &trans        &trans  &trans
+ &trans    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                        &kp NUMBER_6      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
+ &trans          &trans        &trans        &trans        &trans        &trans                        &trans            &de_ue        &trans        &de_oe        &trans        &trans
+ &trans          &de_ae        &trans        &trans        &trans        &trans                        &trans            &trans        &trans        &trans        &trans        &trans
+ &trans          &trans        &trans        &trans        &trans        &trans  &trans  &trans        &trans            &trans        &trans        &trans        &trans        &trans
                                              &trans        &trans        &trans  &trans  &trans        &trans            &trans        &trans
             >;
         };
