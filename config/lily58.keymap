@@ -13,6 +13,12 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
+ZMK_MACRO(my_macro,
+    wait-ms = <30>;
+    tap-ms = <40>;
+    bindings = <&kp Z &kp M &kp K>;
+    )
+
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 / {
@@ -27,12 +33,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-  
-    ZMK_MACRO(my_macro,
-        wait-ms = <30>;
-        tap-ms = <40>;
-        bindings = <&kp Z &kp M &kp K>;
-    )
     
     keymap {
         compatible = "zmk,keymap";
