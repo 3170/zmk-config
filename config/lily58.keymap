@@ -16,33 +16,19 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 / {
-    behaviors {                                             // Autoshift Macro
+    behaviors {                                         // Autoshift Macro
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping_term_ms = <150>;
+            tapping_term_ms = <135>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-};
-                                                            // UNDO-REDO Macro
- / {
-    macros {
-            undo: undo {
-            compatible = "zmk,behavior-macro";
-            label = "undo_redo";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap_time 50>,
-                <&macro_tap>,
-                <&kp LCMD &kp Z>,
-                <&macro_press>,
-                <&kt LCMD &kt LEFT_SHIFT &kp Z>;
-        };
-    };
 
+};
+    
   
     
     keymap {
