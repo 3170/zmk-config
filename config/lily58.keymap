@@ -13,16 +13,10 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
-ZMK_MACRO(my_macro,
-    wait-ms = <30>;
-    tap-ms = <40>;
-    bindings = <&kp Z &kp M &kp K>;
-    )
-
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 / {
-    behaviors {
+    behaviors {                                         // Autoshift Macro
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
@@ -32,7 +26,19 @@ ZMK_MACRO(my_macro,
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-    };
+    
+        ZMK: my_macro {                                  // ZMK Macro
+            compatible = "zmk,behavior-macro";
+            label = "ZMK_MAKRO";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp Z &kp M &kp K>;
+        };
+    
+};
+    
+  
     
     keymap {
         compatible = "zmk,keymap";
@@ -40,7 +46,7 @@ ZMK_MACRO(my_macro,
         default_layer {
             bindings = <
 //  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp TAB       &trans        &trans        &trans      &kp ZMK_MAKRO    &mo 1                                       &mo 2         &kp C_PP    &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &kp QUESTION
+        &kp TAB       &trans        &trans        &trans       &kp ZMK          &mo 1                                       &mo 2         &kp C_PP    &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &kp QUESTION
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp BACKSPACE     AS(Q)         AS(W)         AS(E)         AS(R)         AS(T)                                       AS(Z)         AS(U)         AS(I)         AS(O)          AS(P)     &kp BACKSPACE
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
