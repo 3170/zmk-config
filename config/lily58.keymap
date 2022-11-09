@@ -34,7 +34,7 @@
         default_layer {
             bindings = <
 //  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp TAB       &trans        &trans        &trans        &trans         &mo 1                                       &mo 2         &kp C_PP    &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &kp QUESTION
+        &kp TAB       &trans        &trans     &kp C_AC_UNDO &kp C_AC_REDO     &mo 1                                       &mo 2         &kp C_PP    &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &kp QUESTION
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp BACKSPACE     AS(Q)         AS(W)         AS(E)         AS(R)         AS(T)                                       AS(Z)         AS(U)         AS(I)         AS(O)          AS(P)     &kp BACKSPACE
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -55,11 +55,11 @@
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &out OUT_TOG    &trans         &trans         &trans       &trans        &trans                                    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6     &trans        &trans        &trans
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &bt BT_CLR     &trans         &trans         &trans       &trans        &trans                                    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &ett_sign     &kp PG_UP	     &trans
+      &bt BT_CLR     &trans         &trans         &trans       &trans        &trans                                    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &ett_sign    &kp PAGE_UP     &trans
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &bt BT_NXT     &trans         &trans         &trans       &trans        &trans         &trans           &trans    &kp KP_MINUS  &kp NUMBER_0   &kp KP_PLUS     &trans       &kp PG_DN      &kp END
+      &bt BT_NXT     &trans         &trans         &trans       &trans        &trans         &trans           &trans    &kp KP_MINUS  &kp NUMBER_0   &kp KP_PLUS     &trans      &kp PAGE_DN  &kp C_AC_FORWARD
 //  ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯                              ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &trans         &trans       &trans        &trans                                       &kp LT     &kp KP_EQUAL     &kp GT       &kp HOME
+                                    &trans         &trans       &trans        &trans                                       &kp LT     &kp KP_EQUAL     &kp GT     &kp C_AC_BACK
 //                              ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
 
             >;
