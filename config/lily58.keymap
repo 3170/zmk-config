@@ -19,8 +19,8 @@
 /* layer and key shortcuts */
 
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
-#define 111 1
-#define 222 2
+#define RAI 1
+#define LOW 2
 #define NEO 3
 
 /* custom behaviors */
