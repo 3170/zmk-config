@@ -8,4 +8,4 @@ ZMK_UNICODE_SINGLE( de_eszett,  N0, N0,  D,  F)
 /* Other */
 
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
-ZMK_UNICODE_SINGLE(ett_sign, N0, N0, N3, N3)
+ZMK_UNICODE_SINGLE(ett_sign, N0, N0, N4, N0)
