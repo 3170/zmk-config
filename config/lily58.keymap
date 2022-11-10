@@ -11,12 +11,16 @@
 
 #define HOST_OS 2
 #include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/keypos_def/keypos_58keys.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
+
+// BEHAVIORS
+
 / {
-    behaviors {                                         // Autoshift Macro
+    behaviors {                                         // Autoshift Macro defined in helper.h
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
@@ -26,10 +30,27 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
 };
-    
   
+// MACROS
+
+// to call a simple UNDO Macro use:     &kp LG(Z)
+// to call a autoshift UNDO Macro use:  AS(LG(Z))
+  
+// to call a macro like this use:       &undo
+// macros {
+//        undo: macro_name {
+//        label = "undo";
+//        compatible = "zmk,behavior-macro";
+//        #binding-cells = <0>;
+//        bindings
+//                = <&macro_press &kp LCMD>
+//                , <&macro_tap &kp Z>
+//                , <&macro_release &kp LCMD>
+//                ;
+//     };
+// };
+
     
     keymap {
         compatible = "zmk,keymap";
