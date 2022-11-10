@@ -29,6 +29,19 @@
 
 };
     
+macros {
+    macro_name: macro_name {
+        label = "my_macro";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_press &kp LSHFT>
+            , <&macro_tap &kp A &kp B &kp C>
+            , <&macro_release &kp LSHFT>
+            ;
+    };
+};
+
   
     
     keymap {
@@ -37,7 +50,7 @@
         default_layer {
             bindings = <
 //  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp TAB       &trans        &trans        &trans     &kp LCMD(Z)     &mo 1                                       &mo 2         &kp C_PP    &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &kp QUESTION
+        &kp TAB       &trans        &trans        &trans     &macro_name     &mo 1                                       &mo 2         &kp C_PP    &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &kp QUESTION
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp BACKSPACE     AS(Q)         AS(W)         AS(E)         AS(R)         AS(T)                                       AS(Z)         AS(U)         AS(I)         AS(O)          AS(P)     &kp BACKSPACE
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
