@@ -21,7 +21,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
+            tapping_term_ms = <150>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -37,7 +37,7 @@
         default_layer {
             bindings = <
 //  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp TAB       &trans        &trans        &trans       &kp LG(Z)       &mo 1                                       &mo 2         &kp C_PP    &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &kp QUESTION
+        &kp TAB       &trans        &trans        &trans       AS(LG(Z))       &mo 1                                       &mo 2         &kp C_PP    &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &kp QUESTION
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp BACKSPACE     AS(Q)         AS(W)         AS(E)         AS(R)         AS(T)                                       AS(Z)         AS(U)         AS(I)         AS(O)          AS(P)     &kp BACKSPACE
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
