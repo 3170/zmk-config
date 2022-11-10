@@ -35,28 +35,28 @@ ZMK_BEHAVIOR(hrm, hold_tap,
 )
 
 // tap: sticky shift | double tap: capsword
-ZMK_BEHAVIOR(ss_cw, tap_dance,
-    tapping-term-ms = <200>;
-    bindings = <&sk LSHFT>, <&caps_word>;
-)
+// ZMK_BEHAVIOR(ss_cw, tap_dance,
+//    tapping-term-ms = <200>;
+//   bindings = <&sk LSHFT>, <&caps_word>;
+// )
 
 // tap: backspace | shift + tap: delete | hold: num layer
-ZMK_BEHAVIOR(bs_del_num, mod_morph,
-    bindings = <&lt NUM BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
+// ZMK_BEHAVIOR(bs_del_num, mod_morph,
+//    bindings = <&lt NUM BSPC>, <&kp DEL>;
+//    mods = <(MOD_LSFT|MOD_RSFT)>;
+// )
 
 // euro sign
-ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
+// ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 // replace a/o/u/s with German umlauts when NAV and NUM are held jointly
-ZMK_CONDITIONAL_LAYER(NAV NUM, GER)
+// ZMK_CONDITIONAL_LAYER(NAV NUM, GER)
 
 // combos
-#undef COMBO_TERM
-#define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
-ZMK_COMBO(combo_copy,   &kp LC(C),  LB2 LB3, ALL)  // Ctrl + C, active on all layers
-ZMK_COMBO(combo_paste,  &kp LC(V),  LB1 LB2, ALL)  // Ctrl + V, active on all layers
+// #undef COMBO_TERM
+// #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
+// ZMK_COMBO(combo_copy,   &kp LC(C),  LB2 LB3, ALL)  // Ctrl + C, active on all layers
+// ZMK_COMBO(combo_paste,  &kp LC(V),  LB1 LB2, ALL)  // Ctrl + V, active on all layers
 
 /* keymap */
 
