@@ -29,19 +29,6 @@
 
 };
     
-macros {
-    undo: macro_name {
-        label = "undo";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-            = <&macro_press &kp LCMD>
-            , <&macro_tap &kp Z>
-            , <&macro_release &kp LCMD>
-            ;
-    };
-};
-
   
     
     keymap {
@@ -50,7 +37,7 @@ macros {
         default_layer {
             bindings = <
 //  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp TAB       &trans        &trans        &trans        &undo          &mo 1                                       &mo 2         &kp C_PP    &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &kp QUESTION
+        &kp TAB       &trans        &trans        &trans       &kp LG(Z)       &mo 1                                       &mo 2         &kp C_PP    &kp C_NEXT   &kp C_VOL_DN  &kp C_VOL_UP  &kp QUESTION
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp BACKSPACE     AS(Q)         AS(W)         AS(E)         AS(R)         AS(T)                                       AS(Z)         AS(U)         AS(I)         AS(O)          AS(P)     &kp BACKSPACE
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
