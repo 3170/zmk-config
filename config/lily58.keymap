@@ -61,9 +61,9 @@ ZMK_BEHAVIOR(as, hold_tap,
 // combos
  #undef COMBO_TERM
  #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
- ZMK_COMBO(combo_cut,    &kp LC(X),  LB4 LB5, ALL)  // Ctrl + X, active on all layers
- ZMK_COMBO(combo_copy,   &kp LC(C),  LB3 LB4, ALL)  // Ctrl + C, active on all layers
- ZMK_COMBO(combo_paste,  &kp LC(V),  LB2 LB3, ALL)  // Ctrl + V, active on all layers
+ ZMK_COMBO(combo_cut,    &kp LG(X),  LB4 LB5, ALL)  // CMD + X, active on all layers
+ ZMK_COMBO(combo_copy,   &kp LG(C),  LB3 LB4, ALL)  // CMD + C, active on all layers
+ ZMK_COMBO(combo_paste,  &kp LG(V),  LB2 LB3, ALL)  // CMD + V, active on all layers
 
 /* keymap */
 
