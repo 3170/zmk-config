@@ -49,8 +49,6 @@ ZMK_BEHAVIOR(hrm, hold_tap,
 ZMK_BEHAVIOR(as, hold_tap,
             flavor = "tap-preferred";
             tapping_term_ms = <150>;
-            quick_tap_ms = <0>;
-            #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 )
 
