@@ -34,11 +34,11 @@ ZMK_BEHAVIOR(hrm, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
-// tap: sticky shift | double tap: capsword
-// ZMK_BEHAVIOR(ss_cw, tap_dance,
-//    tapping-term-ms = <200>;
-//   bindings = <&sk LSHFT>, <&caps_word>;
-// )
+ tap: sticky shift | double tap: capsword
+ ZMK_BEHAVIOR(ss_cw, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&sk LSHFT>, <&caps_word>;
+)
 
 // tap: backspace | shift + tap: delete | hold: num layer
 // ZMK_BEHAVIOR(bs_del_num, mod_morph,
@@ -46,31 +46,29 @@ ZMK_BEHAVIOR(hrm, hold_tap,
 //    mods = <(MOD_LSFT|MOD_RSFT)>;
 // )
 
-// euro sign
-// ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
-
 // replace a/o/u/s with German umlauts when NAV and NUM are held jointly
-// ZMK_CONDITIONAL_LAYER(NAV NUM, GER)
+   ZMK_CONDITIONAL_LAYER(NAV NUM, GER)
 
 // combos
-// #undef COMBO_TERM
-// #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
-// ZMK_COMBO(combo_copy,   &kp LC(C),  LB2 LB3, ALL)  // Ctrl + C, active on all layers
-// ZMK_COMBO(combo_paste,  &kp LC(V),  LB1 LB2, ALL)  // Ctrl + V, active on all layers
+ #undef COMBO_TERM
+ #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
+ ZMK_COMBO(combo_cut,    &kp LC(X),  LB4 LB5, ALL)  // Ctrl + X, active on all layers
+ ZMK_COMBO(combo_copy,   &kp LC(C),  LB3 LB4, ALL)  // Ctrl + C, active on all layers
+ ZMK_COMBO(combo_paste,  &kp LC(V),  LB2 LB3, ALL)  // Ctrl + V, active on all layers
 
 /* keymap */
 
 ZMK_LAYER(default_layer,
 //  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp ESC        &mo 1         &mo 2         &mo 3          ___           ___                                          ___           ___           ___           ___           ___       &kp QUESTION
+        &kp ESC         ___           ___           ___        AS(LG(Z))   &kp BACKSPACE                                &kp BACKSPACE      ___           ___           ___           ___       &kp QUESTION
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp TAB        &kp Q         &kp W         &kp E         &kp R         &kp T                                        &kp Z         &kp U         &kp I         &kp O         &kp P          ___
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           ___      &hrm LCTRL A   &hrm LALT S   &hrm LCMD D  &hrm LSHFT F      &kp G                                        &kp H     &hrm RSHFT J   &hrm RCMD K   &hrm RALT L &hrm RCTRL UP_ARROW    ___
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          ___          &kp Y         &kp X         &kp C         &kp V         &kp B       &kp ENTER        &kp ENTER       &kp N         &kp M     &kp KP_COMMA      &kp DOT         ___           ___
+          ___          &kp Y         &kp X         &kp C         &kp V         &kp B     &lt NAV ENTER    &lt NUM ENTER     &kp N         &kp M     &kp KP_COMMA     &kp DOT   &kp DOWN_ARROW &kp RIGHT_ARROW
 //  ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯                              ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                      ___           ___           ___        &kp SPACE                                    &kp SPACE        ___      &kp KP_MINUS        ___
+                               &kp LG(KP_MINUS) &kp LG(KP_PLUS)  AS(LG(Z))   &kp SPACE                                    &kp SPACE        ___      &kp KP_MINUS  &kp LEFT_ARROW
 //                              ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
 //
 //  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
@@ -100,9 +98,9 @@ ZMK_LAYER(nav_layer,
 //  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
          ___            ___           ___           ___           ___           ___                                          ___           ___           ___           ___           ___           ___
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         ___            ___           ___           ___           ___           ___                                          ___           ___           ___           ___           ___           ___
+         ___            ___         &kp C_PP   &kp UP_ARROW   &kp C_NEXT    &kp C_VOL_UP                                     ___           ___           ___           ___           ___           ___
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         ___            ___           ___           ___           ___           ___                                          ___           ___           ___           ___           ___           ___
+         ___            ___    &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp C_VOL_DN                                    ___           ___           ___           ___           ___           ___
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          ___            ___           ___           ___           ___           ___           ___              ___           ___           ___           ___           ___           ___           ___
 //  ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯                              ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
