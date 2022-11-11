@@ -34,7 +34,7 @@ ZMK_BEHAVIOR(hrm, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
- tap: sticky shift | double tap: capsword
+ // tap: sticky shift | double tap: capsword
  ZMK_BEHAVIOR(ss_cw, tap_dance,
     tapping-term-ms = <200>;
     bindings = <&sk LSHFT>, <&caps_word>;
