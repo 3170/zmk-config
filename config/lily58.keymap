@@ -64,6 +64,8 @@ ZMK_BEHAVIOR(as, hold_tap,
  ZMK_COMBO(combo_cut,    &kp LG(X),  LB4 LB5, ALL)  // CMD + X, active on all layers
  ZMK_COMBO(combo_copy,   &kp LG(C),  LB3 LB4, ALL)  // CMD + C, active on all layers
  ZMK_COMBO(combo_paste,  &kp LG(V),  LB2 LB3, ALL)  // CMD + V, active on all layers
+ ZMK_COMBO(combo_pastefront,  &kp LG(F),  LL0 LL1, ALL)  // CMD + V, active on all layers
+ ZMK_COMBO(combo_pasteback,  &kp LG(B),  LB1 LB2, ALL)  // CMD + V, active on all layers
 
 /* keymap */
 
@@ -77,7 +79,7 @@ ZMK_LAYER(default_layer,
 //  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           ___          &kp Y         &kp X         &kp C         &kp V         &kp B     &lt NAV ENTER    &lt NUM ENTER     &kp N         &kp M      &kp COMMA       &kp DOT  &kp DOWN_ARROW &kp RIGHT_ARROW
 //  ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯                              ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                               &kp LG(KP_MINUS) &kp LG(KP_PLUS)  AS(LG(Z))   &kp SPACE                                    &kp SPACE        ___      &kp KP_MINUS  &kp LEFT_ARROW
+                                ___  ___    &hrm (LCMD(NUMBER_0)) (LCMD(LSHFT(NUMBER_0))) &kp SPACE                       &kp SPACE        ___      &kp KP_MINUS  &kp LEFT_ARROW
 //                              ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
 )
 
