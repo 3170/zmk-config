@@ -58,7 +58,7 @@ ZMK_BEHAVIOR(as, hold_tap,
 // replace a/o/u/s with German umlauts when NAV and NUM are held jointly
    ZMK_CONDITIONAL_LAYER(NAV NUM, GER)
 
-// combos
+// combos - defined in german.dtsi
  #undef COMBO_TERM
  #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
  ZMK_COMBO(combo_cut,    &kp LG(X),  LB4 LB5, ALL)  // CMD + X, active on all layers
@@ -66,6 +66,11 @@ ZMK_BEHAVIOR(as, hold_tap,
  ZMK_COMBO(combo_paste,  &kp LG(V),  LB2 LB3, ALL)  // CMD + V, active on all layers
  ZMK_COMBO(combo_pastefront,  &kp LG(F),  LL0 LL1, ALL)  // CMD + V, active on all layers
  ZMK_COMBO(combo_pasteback,  &kp LG(B),  LB1 LB2, ALL)  // CMD + V, active on all layers
+ 
+ ZMK_COMBO(combo_northeast,  &arr_notheast,  RL4 RH3, NAV)  // arrow top left, active on nav_layer
+ ZMK_COMBO(combo_norhtwest,  &arr_northwest,  RL4 RB6, NAV)  // arrow top right, active on nav_layer
+ ZMK_COMBO(combo_southeast,  &arr_southeast,  RB5 RH3, NAV)  // arrow bottom left, active on nav_layer
+ ZMK_COMBO(combo_southwest,  &arr_southwest,  RB5 RB6, NAV)  // arrow bottom right, active on nav_layer
 
 /* keymap */
 
