@@ -8,16 +8,16 @@
 # shield: [ "corne_left", "corne_right" ]
 # include:
 #   - board: bdn9_rev2
-#   - board: nice_nano_v2
+#   - board: nice_nano_v2_v2
 #     shield: reviung41
 #
 ---
 include:
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: lily58_left
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: lily58_right
 
   # Reset Board Settings
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: settings_reset

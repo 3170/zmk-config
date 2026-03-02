@@ -30,7 +30,7 @@ ZMK_BEHAVIOR(hrm, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <125>;
-    require-prior-idle-ms = <125>;
+    global-quick-tap;
     bindings = <&kp>, <&kp>;
 )
 
