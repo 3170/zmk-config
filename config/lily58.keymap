@@ -30,7 +30,7 @@ ZMK_BEHAVIOR(hrm, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <125>;
-    global-quick-tap;
+    require-prior-idle-ms = <125>;
     bindings = <&kp>, <&kp>;
 )
 
@@ -45,7 +45,7 @@ ZMK_BEHAVIOR(hrm, hold_tap,
 // Autoshift Macro
 ZMK_BEHAVIOR(as, hold_tap,
             flavor = "tap-preferred";
-            tapping_term_ms = <150>;
+            tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
 )
 
